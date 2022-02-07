@@ -1,0 +1,46 @@
+{
+  "name": "imageshms",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "engine-strict": true,
+  "scripts": {
+    "start": "pm2 start src/app.js --interpreter babel-node --name imageshms-api",
+    "dev": "nodemon --exec babel-node src/app.js"
+  },
+  "keywords": [],
+  "author": "Bittu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "celebrate": "^14.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "find-remove": "^3.0.0",
+    "form-data": "^4.0.0",
+    "http-status-codes": "^2.1.4",
+    "lodash": "^4.17.21",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "mysql2": "^2.2.5",
+    "node-cmd": "^4.0.0",
+    "random-word-by-length": "^0.1.0",
+    "randomstring": "^1.1.5",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.12",
+    "@babel/preset-env": "^7.13.12",
+    "nodemon": "^2.0.7"
+  },
+  "bugs": {},
+  "homepage": ""
+}
