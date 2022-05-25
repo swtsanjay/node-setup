@@ -13,6 +13,10 @@ const config = {
     charset: 'utf8mb4',
     collate: 'utf8mb4_unicode_ci',
   },
+  jwt: {
+    expDuration: process.env.JWT_TIME,
+    secretKey: process.env.JWT_SECREATE_kEY
+  },
 
   /**
    * Used by winston logger

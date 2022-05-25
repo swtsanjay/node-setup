@@ -2,7 +2,7 @@ const Response = require('../utilities/Response');
 const Logger = require('../utilities/Logger');
 
 
-const userRoute = require('./modules/user/userRoute');
+const userRoute = require('./modules/admin/user/userRoute');
 
 const api = (app) => {
     app.use('*', (req, res, next) => {
@@ -39,7 +39,7 @@ const api = (app) => {
     /**
      * Private routes
      */
-    app.use('', userRoute);
+    app.use('/admin', userRoute);
 };
 
 module.exports = api;

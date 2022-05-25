@@ -27,16 +27,16 @@ process.on('uncaughtException', function (error) {
 				process.exit(1);
 				return;
 			}
-			// Logger.log(
-			// 	'info',
-			// 	`
-			// 		################################################
-			// 		🛡️  Server listening on port: ${config.port} 🛡️
-			// 		################################################
-			// 	`,
-			// );
+			Logger.log(
+				'info',
+				`
+					################################################
+					🛡️  Server listening on port: ${config.port} 🛡️
+					################################################
+				`,
+			);
 
-			console.log(`Server listening on port: ${config.port}`);
+			// console.log(`Server listening on port: ${config.port}`);
 		});
 	} catch (e) {
 		// Deal with the fact the chain failed
