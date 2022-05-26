@@ -1,5 +1,7 @@
 const Response = require('../utilities/Response');
 const Logger = require('../utilities/Logger');
+const { errors } = require('celebrate');
+
 
 
 const userRoute = require('./modules/admin/user/userRoute');
@@ -40,6 +42,8 @@ const api = (app) => {
      * Private routes
      */
     app.use('/admin', userRoute);
+    app.use(errors());
+
 };
 
 module.exports = api;

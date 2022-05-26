@@ -1,5 +1,5 @@
 {
-  "name": "imageshms",
+  "name": "node-setup",
   "version": "1.0.0",
   "main": "src/app.js",
   "engine-strict": true,
@@ -8,7 +8,7 @@
     "dev": "nodemon src/app.js"
   },
   "keywords": [],
-  "author": "Bittu",
+  "author": "Sanjay Yadav",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

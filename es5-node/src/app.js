@@ -18,9 +18,7 @@ process.on('uncaughtException', function (error) {
 (async () => {
 	try {
 		const app = express();
-
 		await initLoader({ expressApp: app });
-
 		app.listen(config.port, err => {
 			if (err) {
 				Logger.error('', err);
@@ -36,7 +34,6 @@ process.on('uncaughtException', function (error) {
 				`,
 			);
 
-			// console.log(`Server listening on port: ${config.port}`);
 		});
 	} catch (e) {
 		// Deal with the fact the chain failed

@@ -1,12 +1,16 @@
-const { celebrate, Joi } = require('celebrate');
+const { celebrate, Joi, Segments } = require('celebrate');
 
 const validations = {
-    // login: celebrate({
-    //     req: Joi.object().keys({
-    //         email: Joi.string().required(),
-    //         password: Joi.string().required(),
-    //     }),
-    // })
+    login: celebrate({
+        [Segments.BODY]: Joi.object().keys({
+            userName: Joi.required().messages({
+                'any.required': 'User name is required',
+            }),
+            password: Joi.required().messages({
+                'any.required': 'Password is required',
+            })
+        }),
+    })
 };
 
 module.exports = validations;
