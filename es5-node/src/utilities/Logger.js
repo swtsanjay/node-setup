@@ -45,7 +45,7 @@ class Logger {
 				);
 			} else {
 				const fileTransport = new winston.transports.DailyRotateFile({
-					filename: `${Config.logDir}/app.log.%DATE%`,
+					filename: `${Config.logDir}/app.%DATE%.log`,
 					datePattern: 'YYYY-MM-DD-HH',
 					zippedArchive: true,
 					handleExceptions: true,

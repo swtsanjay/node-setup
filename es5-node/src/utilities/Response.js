@@ -14,20 +14,20 @@ class Response {
 	 * @param {*} [extra={}]
 	 * @memberof Response
 	 */
-	static success(res, message, data = null, code = HttpStatus.OK, extra = {}) {
+	static success(res, message, data = null, code = HttpStatus.StatusCodes.OK, extra = {}) {
 		const resObj = { success: true };
 
 		if (_.isObjectLike(message)) {
 			resObj.message = message.message || 'success';
 			resObj.data = message.data || null;
-			resObj.code = message.code || HttpStatus.OK;
+			resObj.code = message.code || HttpStatus.StatusCodes.OK;
 			if (!_.isEmpty(message.extra) && _.isObjectLike(message.extra)) {
 				resObj.extra = message.extra;
 			}
 		} else {
 			resObj.message = message || 'success';
 			resObj.data = data || null;
-			resObj.code = code || HttpStatus.OK;
+			resObj.code = code || HttpStatus.StatusCodes.OK;
 			if (!_.isEmpty(extra) && _.isObjectLike(extra)) {
 				resObj.extra = extra;
 			}
@@ -61,19 +61,19 @@ class Response {
 	 * @param {*} [extra={}]
 	 * @memberof Response
 	 */
-	static fail(res, message, code = HttpStatus.NOT_FOUND, resCode = HttpStatus.NOT_FOUND, extra = {}) {
+	static fail(res, message, code = HttpStatus.StatusCodes.NOT_FOUND, resCode = HttpStatus.StatusCodes.NOT_FOUND, extra = {}) {
 		const resObj = { success: false };
 
 		if (_.isObjectLike(message)) {
 			resObj.message = message.message || 'failed';
-			resObj.code = message.code || HttpStatus.NOT_FOUND;
+			resObj.code = message.code || HttpStatus.StatusCodes.NOT_FOUND;
 			resObj.resCode = message.resCode || resObj.code;
 			if (!_.isEmpty(message.extra) && _.isObjectLike(message.extra)) {
 				resObj.extra = message.extra;
 			}
 		} else {
 			resObj.message = message || 'failed';
-			resObj.code = code || HttpStatus.NOT_FOUND;
+			resObj.code = code || HttpStatus.StatusCodes.NOT_FOUND;
 			resObj.resCode = resCode || resObj.code;
 			if (!_.isEmpty(extra) && _.isObjectLike(extra)) {
 				resObj.extra = extra;

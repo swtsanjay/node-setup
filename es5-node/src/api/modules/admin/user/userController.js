@@ -10,6 +10,13 @@ class UserController {
 			Response.fail(res, e);
 		}
 	}
+	static async validateToken(req, res) {
+		try {
+			Response.success(res, {message: 'Validated', });
+		} catch (e) {
+			Response.fail(res, e);
+		}
+	}
 }
 
 module.exports = UserController;
